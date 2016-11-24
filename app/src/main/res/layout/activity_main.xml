@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.siyehua.listenerfile.MainActivity">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/head"
+        />
+
+    <ImageView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom"
+        />
+
+    <ListView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/head"
+        android:background="#ebebeb"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_want"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginRight="8dp"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="你可能要发送的照片:"
+            android:textColor="#919491"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/iv_want"
+            android:layout_width="@dimen/want"
+            android:layout_height="@dimen/want"
+            android:layout_below="@id/tv_text"/>
+    </RelativeLayout>
+
+</RelativeLayout>
